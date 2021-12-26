@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+
+  <style>
+  
+    .container{
+      width:100%;
+      height: 100%;
+      display: flex;
+      /* background-color: black; */
+      justify-content: center;
+      align-items: center;
+    
+    }
+  </style>
+  <body>
+
+
+    <div class="container">
+      <h1><%= title %></h1>
+    </div>
+    
+    
+    <div class="container">
+      <canvas id="table" style="background-color: #436a3a;"></canvas>
+    </div>
+
+
+
+  </body>
+  <script src="./javascripts/data.js"></script>
+    <script src="./javascripts/function.js"></script>
+    <script src="./javascripts/pong.js"></script>
+</html>

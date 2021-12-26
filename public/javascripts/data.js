@@ -1,0 +1,5 @@
+const GAME_WIDTH = 800;
+const GAME_HEIGHT = 500;
+
+const PADDLE_WIDTH = 10;
+const PADDLE_HEIGHT = 100;
