@@ -51,3 +51,49 @@ let ball = {
     color:"white",
     speed:3.5,
 }
+
+
+
+function move(keyCode){
+    if (keyCode == 90){ //w
+        if (leftUser.y - 5 > 0)
+            leftUser.y -= 9;
+        else
+            leftUser.y = 0
+    }
+    else if (keyCode == 83){ //s
+        if (leftUser.y + 9 < GAME_HEIGHT - leftUser.height)
+            leftUser.y += 9;
+        else 
+            leftUser.y = GAME_HEIGHT - leftUser.height
+    }
+
+    else if (keyCode == 38){ //up
+        if (rightUser.y - 9 > 0)
+            rightUser.y -= 9;
+        else
+            rightUser.y = 0
+    }
+    else if (keyCode == 40){ //down
+        if (rightUser.y + 9 < GAME_HEIGHT - rightUser.height)
+            rightUser.y += 9;
+        else
+            rightUser.y = GAME_HEIGHT - rightUser.height;
+    }
+}
+
+
+const controller = {
+    90:{pressed:false, func:()=>{move(90);}},     //w
+    83:{pressed:false, func:()=>{move(83); }},     //s
+    38:{pressed:false, func:()=>{move(38);}},     //i
+    40:{pressed:false, func:()=>{move(40);}},     //k
+}
+
+function executeMoves(){
+    Object.keys(controller).forEach(key=> {
+        if (controller[key].pressed){
+            controller[key].func()
+        }
+    })
+}
