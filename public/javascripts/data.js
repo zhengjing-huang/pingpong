@@ -4,6 +4,9 @@ const GAME_HEIGHT = 500;
 const PADDLE_WIDTH = 10;
 const PADDLE_HEIGHT = 100;
 
+let GAME_FINISH = false;
+
+const audio = new Audio("../sounds/ping-pong-ball-single-bounce-sound-effect-34008790.mp3");
 
 const leftUser = {
     x:20,
