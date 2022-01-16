@@ -77,7 +77,7 @@ function collisionWithWall(){
     // console.log("collisionWithWall");
     if (ball.y + ball.r > GAME_HEIGHT || ball.y - ball.r < 0){
         ball.velocityY = -ball.velocityY;
-        audio.play();
+        //audio.play();
     }
 }
 
@@ -140,7 +140,7 @@ function update(){
         // ball.speed += 0.05;
         
         // ball.velocityY = - ball.velocityY;
-        audio.play();
+         audio.play();
 
         let point = ball.y - (player.y + player.height/2);
         point = point/(player.height/2);
